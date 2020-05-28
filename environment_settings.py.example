@@ -1,0 +1,33 @@
+SITE_BRANDING = "Nectar Dashboard"
+OPENSTACK_HOST = "keystone.openstack"
+OPENSTACK_KEYSTONE_URL = "http://%s:5000/v3" % OPENSTACK_HOST
+OPENSTACK_KEYSTONE_DEFAULT_ROLE = "Member"
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dashboard',
+        'HOST': 'db',
+        'USER': 'dashboard',
+        'PASSWORD': '',
+        'PORT': '',
+    }
+}
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': ['memcached:11211'],
+    },
+}
+
+# Enables keystone web single-sign-on if set to True.
+WEBSSO_ENABLED = True
+
+# Shibboleth URL
+HORIZON_CONFIG['rcshibboleth_url'] = ""
+HORIZON_CONFIG['rcshibboleth_url_nz'] = ""
+
+CORS_ORIGIN_REGEX_WHITELIST = (r'^(http?://)?(\w+\.)?openstack:8000$', )
+
+PASSWORD_RESET_TOKEN = 'test'

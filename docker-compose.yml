@@ -1,0 +1,56 @@
+version: "3"
+
+
+services:
+
+  memcached:
+    image: memcached
+
+  db:
+    image: haproxy
+    environment:
+      # Comma-separated list of IPs/hostnames
+      DB_SERVERS:
+    volumes:
+    - ./haproxy-entrypoint.sh:/haproxy-entrypoint.sh
+    entrypoint: /haproxy-entrypoint.sh
+    command: ["haproxy", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
+
+  dashboard:
+    build: ./dashboard
+    environment:
+      DJANGO_SETTINGS_MODULE: "openstack_dashboard.settings"
+      PIP_EXTRA_DEPENDENCIES: "django-cors-headers<3 Django<2 djangorestframework==3.7.7 django-filter==1.1.0 XStatic-jQuery<2"
+      # SKIP_SETUP: "yes"
+    volumes:
+    - ./settings.py:/config/local_settings.py
+    - ./environment_settings.py:/config/environment_settings.py
+    - dashboard-sources-sync:/src:nocopy
+    - staticfiles:/static
+    - logs:/logs
+    - pip-cache:/root/.cache/pip
+    stdin_open: true
+    tty: true
+
+  nginx:
+    image: nginx
+    volumes:
+    - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    - staticfiles:/var/www/html/static
+    ports:
+    - 8000:80
+
+  logs:
+    image: busybox
+    command: sh -c 'touch /logs/debug && tail -F /logs/debug'
+    volumes:
+    - logs:/logs
+
+
+volumes:
+
+  staticfiles:
+  logs:
+  pip-cache:
+  dashboard-sources-sync:
+    external: true

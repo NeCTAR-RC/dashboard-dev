@@ -1,0 +1,28 @@
+default-branches:
+   https://github.com/NeCTAR-RC: nectar/train
+   https://github.com/openstack: stable/train
+
+repos:
+  - name: horizon
+    src: https://github.com/NeCTAR-RC/horizon.git
+  - name: nectar-dashboard
+    src: https://github.com/NeCTAR-RC/nectar-dashboard.git
+  - name: manukaclient
+    src: https://github.com/NeCTAR-RC/python-manukaclient.git
+    branch: master
+  - name: openstacksdk
+    src: https://github.com/NeCTAR-RC/openstacksdk.git
+  - name: neutron-lbaas-dashboard
+    src: https://github.com/NeCTAR-RC/neutron-lbaas-dashboard.git
+  - name: trove-dashboard
+    src: https://github.com/NeCTAR-RC/trove-dashboard.git
+  - name: murano-dashboard
+    src: https://github.com/NeCTAR-RC/murano-dashboard.git
+  - name: octavia-dashboard
+    src: https://github.com/NeCTAR-RC/octavia-dashboard.git
+  - name: manila-ui
+    src: https://github.com/openstack/manila-ui.git
+  - name: designate-dashboard
+    src: https://github.com/openstack/designate-dashboard.git
+  - name: heat-dashboard
+    src: https://github.com/openstack/heat-dashboard.git

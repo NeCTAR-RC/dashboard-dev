@@ -9,7 +9,7 @@ DATABASES = {
         'NAME': 'dashboard',
         'HOST': 'db',
         'USER': 'dashboard',
-        'PASSWORD': '',
+        'PASSWORD': 'test',
         'PORT': '',
     }
 }

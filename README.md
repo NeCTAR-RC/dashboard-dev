@@ -104,6 +104,29 @@ This is just a sidecar that tails the dashboard's debug log file to stdout
 so it appears in the docker-compose logs.
 
 
+## Running with a local DB
+
+By default the docker-compose stack points to an existing database server
+setup. It's also possible to run your own DB locally as part of the stack:
+
+    docker-compose -f docker-compose.yml -f docker-compose-local-db.yml up
+
+This will create a single MariaDB instance and an empty `dashboard` database.
+When the dashboard container starts it will run `django-admin migrate` to
+propagate the tables.
+
+Note you will need to run other compose commands with the same `-f` arguments
+or it will get confused. You may want to alias this command to something
+easier to type.
+
+
+## Debugging
+
+PDB debugging is supported by attaching to the dashboard container with Docker:
+
+    docker attach dashboard-dev_dashboard_1
+
+
 ## More about docker-sync
 
 Host-to-container mounts in Docker on Mac OS come with a huge

@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+
+  dashboard:
+    environment:
+      DJANGO_MIGRATE: "yes"
+
+  mariadb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: dashboard
+      MYSQL_USER: dashboard
+      MYSQL_PASSWORD: test
+    volumes:
+      - db:/var/lib/mysql
+      # Uncomment to import a db dump on first run.
+      # - ./dashboard.sql:/docker-entrypoint-initdb.d/dashboard.sql
+
+  db:
+    environment:
+      DB_SERVERS: mariadb
+      DB_CHECK: " "
+
+volumes:
+  db:

@@ -31,17 +31,19 @@ listen db
   timeout client 10m
 EOF
 
+check="${DB_CHECK:-check port 9200}"
 servers=($(echo "$DB_SERVERS" | tr ',' '\n'))
 if [ -z "${servers[0]}" ]; then
     echo "Please specify at least one DB server ip/hostname in \$DB_SERVERS"
     exit 1
 fi
-echo "  server db1 ${servers[0]}:3306 check port 9200" >> $HAPROXY_CONF
+
+echo "  server db1 ${servers[0]}:3306 $check" >> $HAPROXY_CONF
 if [ "${servers[1]}" ]; then
-  echo "  server db2 ${servers[1]}:3306 check port 9200 backup" >> $HAPROXY_CONF
+  echo "  server db2 ${servers[1]}:3306 $check backup" >> $HAPROXY_CONF
 fi
 if [ "${servers[2]}" ]; then
-  echo "  server db3 ${servers[2]}:3306 check port 9200 backup" >> $HAPROXY_CONF
+  echo "  server db3 ${servers[2]}:3306 $check backup" >> $HAPROXY_CONF
 fi
 
 cat $HAPROXY_CONF

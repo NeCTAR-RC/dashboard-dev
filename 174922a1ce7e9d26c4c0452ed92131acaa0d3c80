@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e76bc1bc_ebc34743",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000157
+      },
+      "writtenOn": "2020-06-04T05:08:10Z",
+      "side": 1,
+      "message": "Caveats: 1) when switching between local DB and external DB, need to use \u0027up --build\u0027.  2) I think that local DB mode is assuming that the DATABASE settings in \u0027environment_settings.py\u0027 are unchanged from the settings in the \u0027.example\u0027 file.",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 118,
+        "endChar": 21
+      },
+      "revId": "174922a1ce7e9d26c4c0452ed92131acaa0d3c80",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    }
+  ]
+}

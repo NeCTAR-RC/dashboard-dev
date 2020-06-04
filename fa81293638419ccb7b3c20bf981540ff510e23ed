@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3b2c7016_8c94caff",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-06-04T08:07:35Z",
+      "side": 1,
+      "message": "This is good. Can probably be moved down to inside the `Run` section? Or vice versa. It would be good to have all the steps in adjacent sections, at least.",
+      "revId": "fa81293638419ccb7b3c20bf981540ff510e23ed",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "56689bb1_9a8e9c28",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-06-04T08:07:35Z",
+      "side": 1,
+      "message": "nit: remove the \"Next,\"s and just start the line with verbs.",
+      "revId": "fa81293638419ccb7b3c20bf981540ff510e23ed",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "47830f1f_77f57c71",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-06-04T08:07:35Z",
+      "side": 1,
+      "message": "This is true everywhere - probably can just remove this line.",
+      "revId": "fa81293638419ccb7b3c20bf981540ff510e23ed",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "74fbcec4_cf9b39a7",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-06-04T08:07:35Z",
+      "side": 1,
+      "message": "Could we just replace this with a link to http://localhost:8000 instead of the command? Saves the copy/paste for the same result. Not sure why I didn\u0027t do that in the first place...",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 0
+      },
+      "revId": "fa81293638419ccb7b3c20bf981540ff510e23ed",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    }
+  ]
+}

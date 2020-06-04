@@ -22,6 +22,30 @@
       "revId": "174922a1ce7e9d26c4c0452ed92131acaa0d3c80",
       "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "40b40516_6f0359fd",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-06-04T08:14:07Z",
+      "side": 1,
+      "message": "1) This should only be needed because I changed dashboard/setup.sh in this commit. --build just rebuilds the dashboard container.\n2) Yeah, this is only guaranteed to work if you don\u0027t fiddle with the DATABASE settings.",
+      "parentUuid": "e76bc1bc_ebc34743",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 118,
+        "endChar": 21
+      },
+      "revId": "174922a1ce7e9d26c4c0452ed92131acaa0d3c80",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
     }
   ]
 }

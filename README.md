@@ -3,6 +3,34 @@
 This project uses Docker Compose to create a development environment
 for the OpenStack dashboard and its plugins.
 
+(Currently, it is a bit Nectar-centric; e.g. in the choice of repos
+and the contents of the "generic" `settings.py` file.)
+
+## Getting Started
+
+1. If you haven't already done so, you need to install Docker Compose
+by following the
+[installation instructions](https://docs.docker.com/compose/install/)
+applicable to your platform.
+
+  - For Mac or Windows, installing Docker Desktop should work.
+  - For Linux, first install
+    [Docker Engine](https://docs.docker.com/engine/install/#server)
+    then follow the instructions above.
+
+2. Install `docker-sync` by following the instructions at the end
+of this document.
+
+3. Clone this repo, and `cd` to its top directory.  (This is where
+you need to be to run the docker container, etc.
+
+4. Copy `environment_settings.py.example` to `environment_settings.py`
+and tailor it for your local environment.  Any tailorings should do here ...
+unless you want to maintain your own fork of the `dashboard-dev` repo.
+
+5. Add the relevant environment variables to your environment; see below.
+
+Now you should be build and start a container as per the "Run" section below.
 
 ## Configuration
 
@@ -28,6 +56,11 @@ This file containers any environment-specific settings that
 will override anything in the `settings.py` file. It is assumed
 that this file is managed outside of this repository.
 
+Settings specified here include:
+
+ - the hostname / URL for your keystone service
+ - the database, tables and credentials used by Nectar dashhoard plugins
+
 
 ### Environment variables
 
@@ -36,6 +69,12 @@ that this file is managed outside of this repository.
 This is used specify the backends used by the HAProxy service.
 It should be a comma-separated list of IPs or hostnames.
 
+Notes:
+
+1. You can bypass the HAProxy and go straight to the database server
+by setting the actual database server hostname in the environment settings.
+
+2. See "Running with a local DB" below for another alternative.
 
 ## Run
 
@@ -43,16 +82,23 @@ To create the stack, start docker-sync first and then run docker-compose:
 
     $ docker-sync start
     $ docker-compose up --build
-    $ open http://localhost:8000
-
+    
 On subsequent runs you can omit the --build argument.
 
-Alternatively, you can run docker-compose daemonized and
+The `up` command in the above blocks until the container is shut down.
+Alternatively, you can run docker-compose detached and
 just watch the logs of a specific container:
 
     $ docker-compose up -d
     $ docker-compose logs -f logs
 
+The Dashboard dev service should now be listening on port 8000 on all of 
+this machine's IP addresses:
+
+- If you have a desktop on machine, you can
+connect to it with a web browser using the URL `http://localhost:8000`.
+- If you are working remotely, you could (selectively!) open up port 8000
+on its external IP address, or you could configure an SSH tunnel.
 
 ## Stop
 

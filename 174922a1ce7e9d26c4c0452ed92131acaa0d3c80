@@ -46,6 +46,30 @@
       "revId": "174922a1ce7e9d26c4c0452ed92131acaa0d3c80",
       "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8e7eada0_1b741f15",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1000157
+      },
+      "writtenOn": "2020-06-05T00:22:51Z",
+      "side": 1,
+      "message": "Point 2 probably should be mentioned explicitly in the README.",
+      "parentUuid": "40b40516_6f0359fd",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 118,
+        "endChar": 21
+      },
+      "revId": "174922a1ce7e9d26c4c0452ed92131acaa0d3c80",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
     }
   ]
 }

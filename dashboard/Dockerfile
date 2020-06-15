@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-venv python3-dev libpython3.6 git build-essential
+RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-venv python3-dev libpython3.6 git build-essential mariadb-client
 RUN python3 -m venv /venv
 
 ENV DJANGO_SETTINGS_MODULE=openstack_dashboard.settings

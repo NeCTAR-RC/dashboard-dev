@@ -20,6 +20,8 @@ repos:
     src: https://github.com/NeCTAR-RC/murano-dashboard.git
   - name: octavia-dashboard
     src: https://github.com/NeCTAR-RC/octavia-dashboard.git
+  - name: magnum-ui
+    src: https://github.com/NeCTAR-RC/magnum-ui.git
   - name: manila-ui
     src: https://github.com/openstack/manila-ui.git
   - name: designate-dashboard

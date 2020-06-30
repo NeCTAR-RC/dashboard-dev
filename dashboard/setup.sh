@@ -14,6 +14,7 @@ ln -sf /config/environment_settings.py "$SETTINGS_DIR/environment_settings.py"
 cp -a /src/nectar-dashboard/nectar_dashboard/enabled/_[0-9]* $ENABLED_DIR/
 cp -a /src/heat-dashboard/heat_dashboard/enabled/_1*.py $ENABLED_DIR/
 cp -a /src/manila-ui/manila_ui/local/enabled/_{8,9}*.py $ENABLED_DIR/
+cp -a /src/magnum-ui/magnum_ui/enabled/_1*.py $ENABLED_DIR/
 cp -a /src/octavia-dashboard/octavia_dashboard/enabled/_1*.py $ENABLED_DIR/
 cp -a /src/murano-dashboard/muranodashboard/local/enabled/_*.py $ENABLED_DIR/
 cp -a /src/trove-dashboard/trove_dashboard/enabled/_1*.py $ENABLED_DIR/

@@ -17,6 +17,7 @@ cp -a /src/manila-ui/manila_ui/local/enabled/_{8,9}*.py $ENABLED_DIR/
 cp -a /src/magnum-ui/magnum_ui/enabled/_1*.py $ENABLED_DIR/
 cp -a /src/octavia-dashboard/octavia_dashboard/enabled/_1*.py $ENABLED_DIR/
 cp -a /src/murano-dashboard/muranodashboard/local/enabled/_*.py $ENABLED_DIR/
+cp -a /src/murano-dashboard/muranodashboard/local/local_settings.d/_*.py $SETTINGS_DIR/
 cp -a /src/trove-dashboard/trove_dashboard/enabled/_1*.py $ENABLED_DIR/
 
 if [ -n "$DJANGO_MIGRATE" ]; then

@@ -561,3 +561,7 @@ SECRET_KEY = 'test'
 
 # Enables keystone web single-sign-on if set to True.
 WEBSSO_ENABLED = False
+
+
+# The Murano plugin still requires this.
+HORIZON_CONFIG['legacy_static_settings'] = False

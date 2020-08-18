@@ -561,3 +561,14 @@ SECRET_KEY = 'test'
 
 # Enables keystone web single-sign-on if set to True.
 WEBSSO_ENABLED = False
+
+
+# The Murano plun requires this.
+
+try:
+    from openstack_dashboard import static_settings
+    LEGACY_STATIC_SETTINGS = True
+except ImportError:
+    LEGACY_STATIC_SETTINGS = False
+
+HORIZON_CONFIG['legacy_static_settings'] = LEGACY_STATIC_SETTINGS

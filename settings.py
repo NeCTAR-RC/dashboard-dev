@@ -243,6 +243,11 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': False,
         },
+        'nectar_dashboard': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
         'novaclient': {
             'handlers': ['file'],
             'level': 'DEBUG',
@@ -485,6 +490,7 @@ ADD_INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'corsheaders',
+    'select2',
 ]
 
 REST_VIEW_SETS = (

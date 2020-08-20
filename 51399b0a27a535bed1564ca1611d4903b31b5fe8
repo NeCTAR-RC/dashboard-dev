@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "09599be6_408e6705",
+        "filename": "settings.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 566,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-08-20T01:49:29Z",
+      "side": 1,
+      "message": "plun -\u003e plugin",
+      "revId": "51399b0a27a535bed1564ca1611d4903b31b5fe8",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3d1467ee_0324adee",
+        "filename": "settings.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 574,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-08-20T01:49:29Z",
+      "side": 1,
+      "message": "The static_settings file is ancient (removed in 2015), so I would just do:\n\n  HORIZON_CONFIG[\u0027legacy_static_settings\u0027] \u003d False\n\nIf you\u0027re interested in contributing upstream you can probably remove this stuff from murano-dashboard entirely as well.",
+      "revId": "51399b0a27a535bed1564ca1611d4903b31b5fe8",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    }
+  ]
+}

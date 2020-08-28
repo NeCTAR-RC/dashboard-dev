@@ -412,6 +412,9 @@ REST_API_REQUIRED_SETTINGS = ['OPENSTACK_HYPERVISOR_FEATURES',
 # following attribute to the URL of your choice.
 HORIZON_CONFIG["help_url"] = "http://support.nectar.org.au/"
 
+# RCallocations plugin has a page to provide extra informatation for warnings
+# about quota and other inconsistencies in an allocation request.
+HORIZON_CONFIG["WARNING_INFO_URL"] = "https://support.ehelp.edu.au/support/solutions/articles/6000220088"
 
 ####################
 # NeCTAR settings  #

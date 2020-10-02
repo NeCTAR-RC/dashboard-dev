@@ -14,8 +14,6 @@ repos:
     branch: master
   - name: openstacksdk
     src: https://github.com/NeCTAR-RC/openstacksdk.git
-  - name: neutron-lbaas-dashboard
-    src: https://github.com/NeCTAR-RC/neutron-lbaas-dashboard.git
   - name: murano-dashboard
     src: https://github.com/NeCTAR-RC/murano-dashboard.git
   - name: octavia-dashboard

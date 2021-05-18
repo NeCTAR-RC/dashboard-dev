@@ -494,6 +494,7 @@ ADD_INSTALLED_APPS = [
     'django_filters',
     'corsheaders',
     'select2',
+    'django.contrib.admin',
 ]
 
 REST_VIEW_SETS = (

@@ -494,6 +494,7 @@ ADD_INSTALLED_APPS = [
     'django_filters',
     'corsheaders',
     'select2',
+    'django.contrib.admin',
 ]
 
 REST_VIEW_SETS = (
@@ -551,6 +552,7 @@ CORS_ALLOW_METHODS = (
         'GET',
         'OPTIONS',
 )
+CORS_ALLOW_ALL = True  # Temporary hack.  Dangerous!!  Don't do this in prod!
 
 # If horizon is running in production (DEBUG is False), set this
 # with the list of host/domain names that the application can serve.

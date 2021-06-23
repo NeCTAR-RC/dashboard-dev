@@ -494,7 +494,6 @@ ADD_INSTALLED_APPS = [
     'django_filters',
     'corsheaders',
     'select2',
-    'django.contrib.admin',
 ]
 
 REST_VIEW_SETS = (
@@ -507,6 +506,7 @@ REST_VIEW_SETS = (
     ('resources', 'nectar_dashboard.rcallocation.api.ResourceViewSet', None),
     ('zones', 'nectar_dashboard.rcallocation.api.ZoneViewSet', None),
     ('service-types', 'nectar_dashboard.rcallocation.api.ServiceTypeViewSet', None),
+    ('ncris-facilities', 'nectar_dashboard.rcallocation.api.NCRISFacilityViewSet', None),
     ('sites', 'nectar_dashboard.rcallocation.api.SiteViewSet', None),
     ('approvers', 'nectar_dashboard.rcallocation.api.ApproverViewSet', None),
     ('for-codes', 'nectar_dashboard.rcallocation.api.for.FORViewSet', 'for-codes'),

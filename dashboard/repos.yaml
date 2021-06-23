@@ -28,3 +28,4 @@ repos:
     src: https://github.com/openstack/heat-dashboard.git
   - name: django-select2-forms
     src: https://github.com/NeCTAR-RC/django-select2-forms.git
+    branch: nectar/master

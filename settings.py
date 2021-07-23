@@ -507,6 +507,7 @@ REST_VIEW_SETS = (
     ('zones', 'nectar_dashboard.rcallocation.api.ZoneViewSet', None),
     ('service-types', 'nectar_dashboard.rcallocation.api.ServiceTypeViewSet', None),
     ('ncris-facilities', 'nectar_dashboard.rcallocation.api.NCRISFacilityViewSet', None),
+    ('ardc-projects', 'nectar_dashboard.rcallocation.api.ARDCSupportViewSet', None),
     ('sites', 'nectar_dashboard.rcallocation.api.SiteViewSet', None),
     ('approvers', 'nectar_dashboard.rcallocation.api.ApproverViewSet', None),
     ('for-codes', 'nectar_dashboard.rcallocation.api.for.FORViewSet', 'for-codes'),

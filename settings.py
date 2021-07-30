@@ -9,8 +9,8 @@ from horizon.utils import secret_key
 from openstack_dashboard.settings import HORIZON_CONFIG
 
 # Force use of native python mysql driver
-import pymysql
-pymysql.install_as_MySQLdb()
+# import pymysql
+# pymysql.install_as_MySQLdb()
 
 
 DEBUG = True

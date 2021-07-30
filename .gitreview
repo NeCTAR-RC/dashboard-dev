@@ -2,4 +2,4 @@
 host=review.rc.nectar.org.au
 port=29418
 project=NeCTAR-RC/dashboard-dev.git
-defaultbranch=master
+defaultbranch=nectar/train

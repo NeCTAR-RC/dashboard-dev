@@ -1,14 +1,16 @@
 default-branches:
    https://github.com/NeCTAR-RC: nectar/train
-   https://github.com/openstack: stable/train
+   https://github.com/openstack: stable/wallaby
 
 repos:
   - name: horizon
-    src: https://github.com/NeCTAR-RC/horizon.git
+    src: https://github.com/openstack/horizon.git
+    branch: stable/wallaby
   - name: trove-dashboard
     src: https://github.com/NeCTAR-RC/trove-dashboard.git
   - name: nectar-dashboard
     src: https://github.com/NeCTAR-RC/nectar-dashboard.git
+    branch: nectar/wallaby
   - name: manukaclient
     src: https://github.com/NeCTAR-RC/python-manukaclient.git
     branch: master

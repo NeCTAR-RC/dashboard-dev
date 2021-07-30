@@ -1,6 +1,6 @@
 default-branches:
-   https://github.com/NeCTAR-RC: nectar/train
-   https://github.com/openstack: stable/train
+   https://github.com/NeCTAR-RC: nectar/wallaby
+   https://github.com/openstack: stable/wallaby
 
 repos:
   - name: horizon
@@ -12,14 +12,12 @@ repos:
   - name: manukaclient
     src: https://github.com/NeCTAR-RC/python-manukaclient.git
     branch: master
-  - name: openstacksdk
-    src: https://github.com/NeCTAR-RC/openstacksdk.git
   - name: murano-dashboard
     src: https://github.com/NeCTAR-RC/murano-dashboard.git
   - name: octavia-dashboard
-    src: https://github.com/NeCTAR-RC/octavia-dashboard.git
+    src: https://github.com/openstack/octavia-dashboard.git
   - name: magnum-ui
-    src: https://github.com/NeCTAR-RC/magnum-ui.git
+    src: https://github.com/openstack/magnum-ui.git
   - name: manila-ui
     src: https://github.com/openstack/manila-ui.git
   - name: designate-dashboard

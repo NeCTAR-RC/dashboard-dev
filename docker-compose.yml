@@ -20,7 +20,7 @@ services:
     build: ./dashboard
     environment:
       DJANGO_SETTINGS_MODULE: "openstack_dashboard.settings"
-      PIP_EXTRA_DEPENDENCIES: "django-cors-headers<3 Django<2 djangorestframework==3.7.7 django-filter==1.1.0 XStatic-jQuery<2"
+      PIP_EXTRA_DEPENDENCIES: "django-cors-headers<3 djangorestframework==3.10.2 django-filter~=2.1.0 XStatic-jQuery<2"
       # SKIP_SETUP: "yes"
     volumes:
     - ./settings.py:/config/local_settings.py

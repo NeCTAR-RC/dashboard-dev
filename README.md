@@ -24,11 +24,14 @@ of this document.
 3. Clone this repo, and `cd` to its top directory.  (This is where
 you need to be to run the docker container, etc.
 
-4. Copy `environment_settings.py.example` to `environment_settings.py`
-and tailor it for your local environment.  Any tailorings should do here ...
+4. Checkout the branch that you should be working on.  The branch names
+follow the standard nomenclature; e.g. `nectar/train`, `nectar/wallaby`.
+
+5. Copy `environment_settings.py.example` to `environment_settings.py`
+and tailor it for your local environment.  Any tailorings should go here ...
 unless you want to maintain your own fork of the `dashboard-dev` repo.
 
-5. Add the relevant environment variables to your environment; see below.
+6. Add the relevant environment variables to your environment; see below.
 
 Now you should be build and start a container as per the "Run" section below.
 

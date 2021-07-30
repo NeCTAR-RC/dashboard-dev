@@ -46,7 +46,6 @@ certifi===2019.6.16
 sphinxcontrib-nwdiag===0.9.5
 requests-aws===0.1.8
 alabaster===0.7.12
-pbr===5.4.3
 munch===2.3.2
 waiting===1.4.1
 attrs===19.1.0
@@ -390,7 +389,6 @@ sphinxcontrib-pecanwsme===0.10.0
 sadisplay===0.4.9
 enum34===1.1.6
 infinisdk===141.1.0
-packaging===19.1
 flask-keystone===0.2
 nose-exclude===0.5.0
 psutil===5.6.3
@@ -410,7 +408,6 @@ XStatic-tv4===1.2.7.0
 XStatic-JSEncrypt===2.3.1.1
 python-cinderclient===5.0.1
 keystonemiddleware===7.0.1
-django-formtools===2.1
 python-ceilometerclient===2.9.0
 XStatic-Spin===1.2.5.2
 tap-as-a-service===3.0.0
@@ -483,7 +480,6 @@ python-rsdclient===0.2.0
 python-magic===0.4.15
 flux===1.3.5
 python-solumclient===2.9.0
-PyMySQL===0.9.3
 kubernetes===10.0.1
 httplib2===0.13.1
 bottle===0.12.17
@@ -557,7 +553,7 @@ pymemcache===2.2.2
 wrapt===1.11.2
 oslo.privsep===1.33.3
 sphinxcontrib-apidoc===0.3.0
-oslo.policy===2.3.3
+oslo.policy===3.2.0
 python-muranoclient===1.3.0
 hvac===0.9.5
 pyeclib===1.6.0
@@ -598,10 +594,8 @@ sphinxcontrib-qthelp===1.0.2;python_version=='3.4'
 sphinxcontrib-qthelp===1.0.2;python_version=='3.5'
 sphinxcontrib-qthelp===1.0.2;python_version=='3.6'
 sphinxcontrib-qthelp===1.0.2;python_version=='3.7'
-keystoneauth1===3.17.2
 statsd===3.3.0
 XenAPI===2.14
-python-keystoneclient===3.21.0
 ceilometer===13.1.0
 demjson===2.2.4
 diskimage-builder===2.30.0
@@ -618,7 +612,6 @@ aniso8601===7.0.0
 rjsmin===1.1.0
 icalendar===4.0.3
 configparser===3.8.1;python_version=='2.7'
-decorator===4.4.0
 cffi===1.12.3
 futurist===1.9.0
 jsonschema===3.0.2
@@ -658,7 +651,6 @@ sortedcontainers===2.1.0
 python-tackerclient===0.16.1
 python-heatclient===1.18.0
 kafka-python===1.4.6
-oslo.utils===3.41.5
 python-editor===1.0.4
 gitdb2===2.0.5
 requests-kerberos===0.12.0
@@ -692,3 +684,4 @@ Pygments===2.3.1;python_version=='3.4'
 Pygments===2.6.1;python_version=='3.5'
 Pygments===2.6.1;python_version=='3.6'
 Pygments===2.6.1;python_version=='3.7'
+

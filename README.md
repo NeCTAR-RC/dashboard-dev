@@ -200,3 +200,8 @@ docker-sync requires Ruby and the docker-sync gem.
 
 You can use the `stop` and `clean` commands to stop the daemon
 and delete the volume.
+
+
+## django-select2 development
+If you need to develop on django-select2 you will need to remove it from the list of dependencies
+from nectar-dashboard/setup.py and add it to dashboard/repos.yaml

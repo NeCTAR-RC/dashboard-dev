@@ -31,3 +31,33 @@ HORIZON_CONFIG['rcshibboleth_url_nz'] = ""
 CORS_ORIGIN_REGEX_WHITELIST = (r'^(http?://)?(\w+\.)?openstack:8000$', )
 
 PASSWORD_RESET_TOKEN = 'test'
+
+# Allocation notifier choices: 'freshdesk' and 'smtp'
+# Choose 'smtp' if you don't want to test Freshdesk integration
+ALLOCATION_NOTIFIER = 'freshdesk'
+
+# Freshdesk details for ticket interactions and / or email outbounding
+
+# This should be the domain name of your (test) Freshdesk site
+FRESHDESK_DOMAIN = "example.freshdesk.com"
+
+# The API key for the Freshdesk account used for email / ticket creation
+FRESHDESK_KEY = "fixme"
+
+# These should be the numeric identifiers for Freshdesk groups
+FRESHDESK_ALLOCATION_GROUP = "1111"
+FRESHDESK_ALLOCATION_NOTIFICATION_GROUP = "2222"
+
+# These should be the numeric identifiers for a Freshdesk email config
+FRESHDESK_EMAIL_CONFIG_ID = "3333"
+
+# Optional Freskdesk tags for emails and tickets
+FRESHDESK_ALLOCATION_EMAIL_TAGS = ['email']
+FRESHDESK_ALLOCATION_TICKET_TAGS = ['ticket']
+
+# Following are the people who are to receive e-mail when an
+# allocation request or amendment is submitted
+ALLOCATION_EMAIL_RECIPIENTS = ("allocations@example.com", )
+ALLOCATION_EMAIL_FROM = "allocations@example.com"
+ALLOCATION_EMAIL_REPLY_TO = "support@example.com"
+ALLOCATION_EMAIL_BCC_RECIPIENTS = []

@@ -447,11 +447,8 @@ ALLOCATION_NOTIFIER = 'freshdesk'
 # Freshdesk details for ticket interactions and / or email outbounding
 FRESHDESK_DOMAIN = "fixme.freshdesk.com"
 FRESHDESK_KEY = "fixme"
-FRESHDESK_ALLOCATION_GROUP = "1111"
-FRESHDESK_ALLOCATION_NOTIFICATION_GROUP = "2222"
+FRESHDESK_GROUP_ID = "1111"
 FRESHDESK_EMAIL_CONFIG_ID = "3333"
-FRESHDESK_ALLOCATION_EMAIL_TAGS = ['email']
-FRESHDESK_ALLOCATION_TICKET_TAGS = ['ticket']
 
 # Following are the people who are to receive e-mail when an
 # allocation request or amendment is submitted

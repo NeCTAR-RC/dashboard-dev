@@ -18,6 +18,7 @@ cp -a /src/magnum-ui/magnum_ui/enabled/_1*.py $ENABLED_DIR/
 cp -a /src/octavia-dashboard/octavia_dashboard/enabled/_1*.py $ENABLED_DIR/
 cp -a /src/murano-dashboard/muranodashboard/local/enabled/_*.py $ENABLED_DIR/
 cp -a /src/trove-dashboard/trove_dashboard/enabled/_1*.py $ENABLED_DIR/
+cp -a /src/designate-dashboard/designatedashboard/enabled/_1*.py $ENABLED_DIR/
 
 if [ -n "$DJANGO_MIGRATE" ]; then
    django-admin migrate

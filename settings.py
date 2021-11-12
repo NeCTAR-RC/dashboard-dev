@@ -164,7 +164,7 @@ POLICY_FILES = {
     'network': 'neutron_policy.json',
     'orchestration': 'heat_policy.json',
     'murano': 'murano_policy.json',
-    'dns': 'designate_policy.json',
+    'dns': 'designate_policy.yaml',
 }
 
 # Change this patch to the appropriate list of tuples containing

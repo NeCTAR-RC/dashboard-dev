@@ -416,6 +416,12 @@ HORIZON_CONFIG["help_url"] = "http://support.nectar.org.au/"
 # about quota and other inconsistencies in an allocation request.
 HORIZON_CONFIG["WARNING_INFO_URL"] = "https://support.ehelp.edu.au/support/solutions/articles/6000220088"
 
+# RCallocations plugin has an approver button to open a browser page
+# with the Freshdesk tickets for a given allocation.
+HORIZON_CONFIG['FRESHDESK_SEARCH_URL'] = (
+    "https://support.ehelp.edu.au/a/tickets/filters/search"
+    "?orderBy=updated_at&orderType=desc&ref=_created")
+
 ####################
 # NeCTAR settings  #
 ####################

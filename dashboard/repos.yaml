@@ -14,6 +14,8 @@ repos:
     branch: master
   - name: murano-dashboard
     src: https://github.com/NeCTAR-RC/murano-dashboard.git
+  - name: cloudkitty-dashboard
+    src: https://github.com/NeCTAR-RC/cloudkitty-dashboard.git
   - name: octavia-dashboard
     src: https://github.com/openstack/octavia-dashboard.git
   - name: magnum-ui

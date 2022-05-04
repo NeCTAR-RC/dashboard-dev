@@ -1,0 +1,36 @@
+tables:
+  django_session: truncate
+  rcallocation_allocationrequest:
+    columns:
+      created_by: random_int
+      project_description: catch_phrase
+      contact_email: email
+      use_case: paragraph
+      usage_patterns: paragraph
+      geographic_requirements: word
+      project_id: random_int
+      project_name: word
+      status_explanation: word
+      approver_email: company_email
+  rcallocation_approver:
+    columns:
+      username: unique_email
+      display_name: name
+  rcallocation_chiefinvestigator:
+    columns:
+      given_name: first_name
+      surname: last_name
+      email: email
+      institution: company
+  rcallocation_grant:
+    columns:
+      grant_id: word
+      total_funding: random_int
+  rcallocation_institution:
+    columns:
+      name: unique_login
+  rcallocation_publication:
+    columns:
+      publication: catch_phrase
+      doi: empty
+      crossref_metadata: empty

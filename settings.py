@@ -452,6 +452,10 @@ ALLOCATION_HOME_STORAGE_ZONE_MAPPINGS = {
     'uom': ['melbourne'],
 }
 
+# FoR code series allowed for new allocations and amendments.  The series
+# names are defined in forcodes.py file.
+ALLOCATION_FOR_CODE_SERIES = "ANZSRC_2020"
+
 CORES_RESOURCE_ID = 47
 INSTANCE_RESOURCE_ID = 53
 

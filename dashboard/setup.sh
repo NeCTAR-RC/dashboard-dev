@@ -12,6 +12,7 @@ ln -sfv /config/local_settings.py "$SETTINGS_FILE"
 ln -sfv /config/environment_settings.py "$SETTINGS_DIR/environment_settings.py"
 
 cp -a /src/nectar-dashboard/nectar_dashboard/enabled/_[0-9]* $ENABLED_DIR/
+cp -a /src/nectar-dashboard/nectar_dashboard/enabled/usage/_[0-9]* $ENABLED_DIR/
 cp -a /src/heat-dashboard/heat_dashboard/enabled/_1*.py $ENABLED_DIR/
 cp -a /src/manila-ui/manila_ui/local/enabled/_{8,9}*.py $ENABLED_DIR/
 cp -a /src/magnum-ui/magnum_ui/enabled/_1*.py $ENABLED_DIR/

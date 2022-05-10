@@ -33,28 +33,21 @@ WEBROOT = '/'
 SHOW_KEYSTONE_V2_RC = False
 LOCAL_PATH = os.path.dirname(os.path.abspath(__file__))
 
-#
-# TODO(tres): Remove these once Keystone has an API to identify auth backend.
-OPENSTACK_KEYSTONE_BACKEND = {
-    'name': 'native',
-    'can_edit_user': True,
-    'can_edit_group': True,
-    'can_edit_project': True,
-    'can_edit_domain': True,
-    'can_edit_role': True,
-}
 
 # A dictionary of settings which can be used to provide the default values for
 # properties found in the Launch Instance modal.
 LAUNCH_INSTANCE_DEFAULTS = {
     'config_drive': False,
+    'enable_scheduler_hints': False,
     'create_volume': False,
     'disable_image': False,
     'disable_instance_snapshot': False,
     'disable_volume': False,
     'disable_volume_snapshot': False,
+    'create_volume': False,
     'enable_scheduler_hints': False,
     'hide_create_volume': True,
+    'config_drive': False,
 }
 
 # The Xen Hypervisor has the ability to set the mount point for volumes
@@ -90,7 +83,7 @@ OPENSTACK_NEUTRON_NETWORK = {
     # list of dns servers when creating a new subnet.
     # The entries below are examples only, and are not appropriate for
     # real deployments
-    'default_dns_nameservers': ["8.8.8.8", "8.8.4.4"],
+    'default_dns_nameservers': ["1.1.1.1", "1.0.0.1"],
 
     # Set which VNIC types are supported for port binding. Only the VNIC
     # types in this list will be available to choose from when creating a
@@ -108,21 +101,15 @@ OPENSTACK_NEUTRON_NETWORK = {
 
 }
 
-# The IMAGE_CUSTOM_PROPERTY_TITLES settings is used to customize the titles for
-# image custom property attributes that appear on image detail pages.
-IMAGE_CUSTOM_PROPERTY_TITLES = {
-    "architecture": _("Architecture"),
-    "kernel_id": _("Kernel ID"),
-    "ramdisk_id": _("Ramdisk ID"),
-    "image_state": _("Euca2ools state"),
-    "project_id": _("Project ID"),
-    "image_type": _("Image Type"),
-}
 
 # The IMAGE_RESERVED_CUSTOM_PROPERTIES setting is used to specify which image
 # custom properties should not be displayed in the Image Custom Properties
 # table.
-IMAGE_RESERVED_CUSTOM_PROPERTIES = []
+IMAGE_RESERVED_CUSTOM_PROPERTIES = [
+    'os_hash_algo',
+    'os_hash_value',
+    'os_hidden'
+]
 
 # The number of objects (Swift containers/objects or images) to display
 # on a single page before providing a paging element (a "more" link)
@@ -130,18 +117,8 @@ IMAGE_RESERVED_CUSTOM_PROPERTIES = []
 API_RESULT_LIMIT = 1000
 API_RESULT_PAGE_SIZE = 50
 
-# The size of chunk in bytes for downloading objects from Swift
-SWIFT_FILE_TRANSFER_CHUNK_SIZE = 512 * 1024
-
-# The default number of lines displayed for instance console log.
-INSTANCE_LOG_LENGTH = 35
-
 # Specify a maximum number of items to display in a dropdown.
 DROPDOWN_MAX_ITEMS = 100
-
-# The timezone of the server. This should correspond with the timezone
-# of your entire OpenStack installation, and hopefully be in UTC.
-TIME_ZONE = "UTC"
 
 # Path to directory containing policy.json files
 POLICY_FILES_PATH = '/src/nectar-dashboard/policy'
@@ -390,23 +367,6 @@ SECURITY_GROUP_RULES = {
         'to_port': '3389',
     },
 }
-# AngularJS requires some settings to be made available to
-# the client side. Some settings are required by in-tree / built-in horizon
-# features. These settings must be added to REST_API_REQUIRED_SETTINGS in the
-# form of ['SETTING_1','SETTING_2'], etc.
-#
-# You may remove settings from this list for security purposes, but do so at
-# the risk of breaking a built-in horizon feature. These settings are required
-# for horizon to function properly. Only remove them if you know what you
-# are doing. These settings may in the future be moved to be defined within
-# the enabled panel configuration.
-# You should not add settings to this list for out of tree extensions.
-# See: https://wiki.openstack.org/wiki/Horizon/RESTAPI
-REST_API_REQUIRED_SETTINGS = ['OPENSTACK_HYPERVISOR_FEATURES',
-                              'LAUNCH_INSTANCE_DEFAULTS',
-                              'OPENSTACK_IMAGE_FORMATS',
-                              'OPENSTACK_KEYSTONE_DEFAULT_DOMAIN',
-                              'CREATE_IMAGE_DEFAULTS']
 
 # Help URL can be made available for the client. To provide a help URL, edit the
 # following attribute to the URL of your choice.
@@ -506,6 +466,7 @@ EMAIL_HOST = 'localhost'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 
 MIDDLEWARE = (
+    'nectar_dashboard.middleware.healthcheck_middleware',
     'corsheaders.middleware.CorsMiddleware',
     'openstack_auth.middleware.OpenstackAuthMonkeyPatchMiddleware',
     'debreach.middleware.RandomCommentMiddleware',

@@ -456,9 +456,6 @@ ALLOCATION_HOME_STORAGE_ZONE_MAPPINGS = {
 # names are defined in forcodes.py file.
 ALLOCATION_FOR_CODE_SERIES = "ANZSRC_2020"
 
-CORES_RESOURCE_ID = 47
-INSTANCE_RESOURCE_ID = 53
-
 # Disable getting console in network topology view as it is a massive performance hit
 CONSOLE_TOPOLOGY_ENABLED = False
 

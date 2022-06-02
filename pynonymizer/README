@@ -1,8 +1,8 @@
 # Generate virtual env
 
 virtualenv .venv
-. .venv
-pip install -r requirements
+. .venv/bin/activate
+pip install -r requirements.txt
 
 # Get production database
 
@@ -10,10 +10,9 @@ mysqldump dashboard > dashboard.sql
 
 #Run anonymizer
 # Choose a unique unused random db name for this
-pynonymizer   -i dashboard.sql -s nectar-dashboard.yaml -o output.sql  --db-host db1.dev.rc.nectar.org.au --db-user root --db-password test --db-name samtest4
+pynonymizer   -i dashboard.sql -s nectar-dashboard.yaml -o output.sql  --db-host db1.dev.rc.nectar.org.au --db-user root --db-password test --db-name samtest4 --output dev.sql
 
 # In swift the object is called dev.sql. This is used by the helm chart when building dev envs. See internal/containers.git
-mv output.sql dev.sql
 
 # nectar-devs project
 swift upload dashboard-dev dev.sql

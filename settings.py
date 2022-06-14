@@ -452,6 +452,32 @@ ALLOCATION_HOME_STORAGE_ZONE_MAPPINGS = {
     'uom': ['melbourne'],
 }
 
+# Mappings from sites to member organization.
+# (Source: https://wiki.rc.nectar.org.au/wiki/NodeMemberOrganizations)
+SITE_MEMBERS_MAPPING = {
+    'ardc': ['ardc.edu.au'],
+    'auckland': ['auckland.edu.nz'],
+    'ersa': [],
+    'intersect': ['acu.edu.au', 'adelaide.edu.au', 'canberra.edu.au',
+                  'deakin.edu.au', 'latrobe.edu.au', 'scu.edu.au',
+                  'une.edu.au', 'unisa.edu.au', 'unsw.edu.au', 'uts.edu.au',
+                  'westernsydney.edu.au', 'saxinstitute.org.au',
+                  'sirca.org.au'],
+    'monash': ['monash.edu', 'rmit.edu.au'],
+    'nci': [],
+    'qcif': ['uq.edu.au', 'qut.edu.au', 'griffith.edu.au',
+             'cqu.edu.au', 'usq.edu.au', 'usc.edu.au', 'jcu.edu.au',
+             'bond.edu.au', 'qcif.edu.au', 'csiro.au'],
+    'swinburne': ['swin.edu.au', 'swinburne.edu.au'],
+    'tpac': ['utas.edu.au', 'aapartnership.org.au', 'bom.gov.au',
+             'csiro.au', 'antarctica.gov.au'],
+    'uom': ['unimelb.edu.au', 'florey.edu.au', 'bionicsinstitute.org',
+            'cera.org.au', 'cr2cr.com.au', 'mentalhealthcrc.com',
+            'petermac.org', 'svhm.org.au', 'wehi.edu.au',
+            'metabolomics.net.au', 'mcri.edu.au', 'viccompcancerctr.org',
+            'cancercrc.com', 'cancervic.org.au', 'mbs.edu'],
+}
+
 # FoR code series allowed for new allocations and amendments.  The series
 # names are defined in forcodes.py file.
 ALLOCATION_FOR_CODE_SERIES = "ANZSRC_2020"

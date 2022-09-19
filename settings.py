@@ -199,7 +199,7 @@ LOGGING = {
         },
         'file': {
             'filename': '/logs/debug',
-            'level': 'DEBUG',
+            'level': 'INFO',
             'class': 'logging.FileHandler',
             'formatter': 'console',
         },

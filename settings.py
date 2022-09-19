@@ -421,6 +421,7 @@ FRESHDESK_EMAIL_CONFIG_ID = "3333"
 ALLOCATION_EMAIL_RECIPIENTS = ("allocations@example.com", )
 ALLOCATION_EMAIL_FROM = "allocations@example.com"
 ALLOCATION_EMAIL_REPLY_TO = "support@example.com"
+ALLOCATION_EMAIL_CC_RECIPIENTS = []
 ALLOCATION_EMAIL_BCC_RECIPIENTS = []
 
 ALLOCATION_GLOBAL_READ_ROLES = ['read_only', 'admin', 'monitoring']

@@ -12,6 +12,8 @@ repos:
   - name: manukaclient
     src: https://github.com/NeCTAR-RC/python-manukaclient.git
     branch: master
+  - name: python-cloudkittyclient
+    src: https://github.com/NeCTAR-RC/python-cloudkittyclient.git
   - name: murano-dashboard
     src: https://github.com/NeCTAR-RC/murano-dashboard.git
   - name: cloudkitty-dashboard

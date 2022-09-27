@@ -10,6 +10,14 @@ def read_config(config_file):
     return yaml.safe_load(config_file)
 
 
+def git_config_safe_dirs(repos):
+    for repo in repos:
+        args = ['git', 'config', '--global',
+                '--add', 'safe.directory', f"/src/{repo['name']}"]
+        print(' '.join(args))
+        subprocess.check_call(args)
+
+
 def pip_install(deps, dest_dir, constraints_file):
     args = [sys.executable, '-m', 'pip', 'install',
             '-c', constraints_file, '--src', dest_dir] + deps
@@ -20,7 +28,8 @@ def pip_install(deps, dest_dir, constraints_file):
 # Do a pip install from either Git or from an existing directory.
 def install(config, dest_dir, constraints_file):
     deps = []
-    for repo in config.get('repos', []):
+    repos = config.get('repos', [])
+    for repo in repos:
         name = repo['name']
         path = os.path.join(dest_dir, name)
         if os.path.exists(path):
@@ -32,6 +41,7 @@ def install(config, dest_dir, constraints_file):
         deps.extend(['-e', requirement])
 
     if deps:
+        git_config_safe_dirs(repos)
         pip_install(deps, dest_dir, constraints_file)
 
 

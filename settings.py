@@ -463,7 +463,7 @@ SITE_MEMBERS_MAPPING = {
                   'deakin.edu.au', 'latrobe.edu.au', 'scu.edu.au',
                   'une.edu.au', 'unisa.edu.au', 'unsw.edu.au', 'uts.edu.au',
                   'westernsydney.edu.au', 'saxinstitute.org.au',
-                  'sirca.org.au'],
+                  'sirca.org.au', 'intersect.org.au'],
     'monash': ['monash.edu', 'rmit.edu.au'],
     'nci': [],
     'qcif': ['uq.edu.au', 'qut.edu.au', 'griffith.edu.au',

@@ -11,6 +11,9 @@ SETTINGS_DIR="$DASHBOARD_DIR/local/local_settings.d"
 ln -sfv /config/local_settings.py "$SETTINGS_FILE"
 ln -sfv /config/environment_settings.py "$SETTINGS_DIR/environment_settings.py"
 
+rm -rf ${ENABLED_DIR}/*
+touch ${ENABLED_DIR}/__init__.py
+
 cp -a /src/nectar-dashboard/nectar_dashboard/enabled/_[0-9]* $ENABLED_DIR/
 cp -a /src/nectar-dashboard/nectar_dashboard/enabled/usage/_[0-9]* $ENABLED_DIR/
 cp -a /src/heat-dashboard/heat_dashboard/enabled/_1*.py $ENABLED_DIR/

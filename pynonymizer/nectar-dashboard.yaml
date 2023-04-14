@@ -21,14 +21,10 @@ tables:
       given_name: first_name
       surname: last_name
       email: email
-      institution: company
   rcallocation_grant:
     columns:
       grant_id: word
       total_funding: random_int
-  rcallocation_institution:
-    columns:
-      name: unique_login
   rcallocation_publication:
     columns:
       publication: catch_phrase

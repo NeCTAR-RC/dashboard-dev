@@ -483,6 +483,22 @@ SITE_MEMBERS_MAPPING = {
 # names are defined in forcodes.py file.
 ALLOCATION_FOR_CODE_SERIES = "ANZSRC_2020"
 
+# URI for the ROR dump file for the 0070 / 0071 migrations that load the
+# Organisations table, load local additions, and convert institution
+# strings to organisation refs.  It the URI is a URL, it will be fetched
+# locally and cached in the current directory.  If it is a relative URI
+# (i.e. no protocol) it is interpreted as a local pathname.  If it is None,
+# these migrations are no-ops.
+ORGANISATION_MIGRATION_ROR_DUMP_URI = \
+    "https://object-store.rc.nectar.org.au" \
+    "/v1/AUTH_2f6f7e75fc0f453d9c127b490b02e9e3/dashboard-ror-dumps/" \
+    "v1.20-2023-02-28-ror-data.json"
+
+# If the following setting is True, any unmappable institution strings
+# will cause the 0071 migration to fail.  If False, they will be quietly
+# mapped to "Unknown Organization"
+ORGANISATION_MIGRATION_STRICT = True
+
 # Disable getting console in network topology view as it is a massive performance hit
 CONSOLE_TOPOLOGY_ENABLED = False
 

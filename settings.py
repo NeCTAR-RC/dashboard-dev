@@ -30,6 +30,8 @@ COMPRESS_OFFLINE = True
 # should end with a slash.
 WEBROOT = '/'
 
+HEALTHCHECK_DISABLE_FILE = "/etc/openstack-dashboard/disable"
+
 SHOW_KEYSTONE_V2_RC = False
 LOCAL_PATH = os.path.dirname(os.path.abspath(__file__))
 

@@ -8,7 +8,6 @@ tables:
       use_case: paragraph
       usage_patterns: paragraph
       geographic_requirements: word
-      project_id: random_int
       project_name: word
       status_explanation: word
       approver_email: company_email

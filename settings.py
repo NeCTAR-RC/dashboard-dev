@@ -136,13 +136,13 @@ POLICY_FILES_PATH = '/src/nectar-dashboard/policy'
 # Having matching policy files on the Horizon and Keystone servers is essential
 # for normal operation. This holds true for all services and their policy files.
 POLICY_FILES = {
-    'identity': 'keystone_policy.json',
-    'compute': 'nova_policy.json',
-    'volume': 'cinder_policy.json',
-    'image': 'glance_policy.json',
-    'network': 'neutron_policy.json',
-    'orchestration': 'heat_policy.json',
-    'murano': 'murano_policy.json',
+    'identity': 'keystone_policy.yaml',
+    'compute': 'nova_policy.yaml',
+    'volume': 'cinder_policy.yaml',
+    'image': 'glance_policy.yaml',
+    'network': 'neutron_policy.yaml',
+    'orchestration': 'heat_policy.yaml',
+    'murano': 'murano_policy.yaml',
     'dns': 'designate_policy.yaml',
 }
 
@@ -384,6 +384,10 @@ HORIZON_CONFIG['FRESHDESK_SEARCH_URL'] = (
     "https://support.ehelp.edu.au/a/tickets/filters/search"
     "?orderBy=updated_at&orderType=desc&ref=_created")
 
+# Dashboard_home needs the base URL for Langstroth outage pages
+HORIZON_CONFIG['OUTAGE_BASE_URL'] = "http://status.dev.rc.nectar.org.au:8000/outages/"
+
+
 ####################
 # NeCTAR settings  #
 ####################
@@ -557,6 +561,21 @@ SECRET_KEY = 'test'
 # Enables keystone web single-sign-on if set to True.
 WEBSSO_ENABLED = False
 
+OPENSTACK_MANILA_FEATURES = {
+    'enabled_share_protocols': ['NFS', 'CIFS', 'CephFS']
+}
+
+# Murano settings
+MURANO_DASHBOARD_NAME = 'Applications'
+MURANO_USE_GLARE = False
+MAX_FILE_SIZE_MB = '5'
+METADATA_CACHE_DIR = '/var/lib/horizon/murano-dashboard'
+
+
+# Heat settings
+OPENSTACK_HEAT_STACK = {
+    'enable_user_pass': False,
+}
 
 # The Murano plugin still requires this.
 HORIZON_CONFIG['legacy_static_settings'] = False

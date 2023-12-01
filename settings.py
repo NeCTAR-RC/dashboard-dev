@@ -136,11 +136,11 @@ POLICY_FILES_PATH = '/src/nectar-dashboard/policy'
 # Having matching policy files on the Horizon and Keystone servers is essential
 # for normal operation. This holds true for all services and their policy files.
 POLICY_FILES = {
-    'identity': 'keystone_policy.yaml',
+    'identity': 'keystone_policy.json',
     'compute': 'nova_policy.yaml',
-    'volume': 'cinder_policy.yaml',
-    'image': 'glance_policy.yaml',
-    'network': 'neutron_policy.yaml',
+    'volume': 'cinder_policy.json',
+    'image': 'glance_policy.json',
+    'network': 'neutron_policy.json',
     'orchestration': 'heat_policy.yaml',
     'murano': 'murano_policy.yaml',
     'dns': 'designate_policy.yaml',
@@ -386,6 +386,7 @@ HORIZON_CONFIG['FRESHDESK_SEARCH_URL'] = (
 
 # Dashboard_home needs the base URL for Langstroth outage pages
 HORIZON_CONFIG['OUTAGE_BASE_URL'] = "http://status.dev.rc.nectar.org.au:8000/outages/"
+# HORIZON_CONFIG['OUTAGE_BASE_URL'] = "http://dev-steve.mgmt.rc.nectar.org.au:8001/outages/"
 
 
 ####################
@@ -431,8 +432,8 @@ ALLOCATION_EMAIL_CC_RECIPIENTS = []
 ALLOCATION_EMAIL_BCC_RECIPIENTS = []
 
 ALLOCATION_GLOBAL_READ_ROLES = ['read_only', 'admin', 'monitoring']
-ALLOCATION_GLOBAL_ADMIN_ROLES = ['admin', 'provisioner']
-ALLOCATION_APPROVER_ROLES = ['allocationadmin', 'admin']
+ALLOCATION_GLOBAL_ADMIN_ROLES = ['admin', 'provisioner', 'allocationadmin']
+ALLOCATION_APPROVER_ROLES = ['allocationadmin', 'allocationapprover']
 
 ALLOCATION_HOME_ZONE_MAPPINGS = {
     'auckland': ['auckland'],
@@ -578,4 +579,4 @@ OPENSTACK_HEAT_STACK = {
 }
 
 # The Murano plugin still requires this.
-HORIZON_CONFIG['legacy_static_settings'] = False
+# HORIZON_CONFIG['legacy_static_settings'] = False

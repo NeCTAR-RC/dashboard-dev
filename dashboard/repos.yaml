@@ -1,6 +1,6 @@
 default-branches:
-   https://github.com/NeCTAR-RC: nectar/wallaby
-   https://github.com/openstack: stable/wallaby
+   https://github.com/NeCTAR-RC: nectar/2023.2
+   https://github.com/openstack: stable/2023.2
 
 repos:
   - name: horizon
@@ -12,8 +12,9 @@ repos:
   - name: manukaclient
     src: https://github.com/NeCTAR-RC/python-manukaclient.git
     branch: master
-  - name: python-cloudkittyclient
-    src: https://github.com/NeCTAR-RC/python-cloudkittyclient.git
+#  - name: python-cloudkittyclient
+#    src: https://github.com/NeCTAR-RC/python-cloudkittyclient.git
+#    branch: nectar/wallaby
   - name: murano-dashboard
     src: https://github.com/NeCTAR-RC/murano-dashboard.git
   - name: cloudkitty-dashboard

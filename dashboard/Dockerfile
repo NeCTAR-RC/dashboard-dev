@@ -10,7 +10,7 @@ RUN python3.8 -m pip install -U pip setuptools wheel
 RUN python3.8 -m pip install pyyaml pbr mysqlclient
 
 WORKDIR /config
-COPY repos.yaml pip_helper.py constraints.txt uwsgi.ini /config/
+COPY repos.yaml pip_helper.py uwsgi.ini /config/
 
 COPY entrypoint.sh setup.sh /
 RUN chmod u+x /entrypoint.sh /setup.sh

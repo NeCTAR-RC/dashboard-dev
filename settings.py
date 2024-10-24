@@ -414,7 +414,7 @@ USER_INFO_LOOKUP_ROLES = [('openstack.roles.allocationadmin',
                            'openstack.roles.admin')]
 
 
-# Allocation notifier choices: 'freshdesk' and 'smtp'
+# Allocation notifier choices: 'freshdesk', 'taynac' or 'smtp'
 ALLOCATION_NOTIFIER = 'freshdesk'
 
 # Freshdesk details for ticket interactions and / or email outbounding
@@ -517,7 +517,6 @@ EMAIL_HOST = 'localhost'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 
 MIDDLEWARE = (
-    'nectar_dashboard.middleware.healthcheck_middleware',
     'corsheaders.middleware.CorsMiddleware',
     'openstack_auth.middleware.OpenstackAuthMonkeyPatchMiddleware',
     'debreach.middleware.RandomCommentMiddleware',

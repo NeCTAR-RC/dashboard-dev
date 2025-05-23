@@ -190,7 +190,7 @@ LOGGING = {
         },
         'console': {
             # Set the level to "DEBUG" for verbose output logging.
-            'level': 'INFO',
+            'level': 'ERROR',
             'class': 'logging.StreamHandler',
             'formatter': 'console',
         },
@@ -406,6 +406,7 @@ OPENSTACK_PREPROD_CELLS = [""]
 OPENSTACK_PREPROD_ROLE = "admin"
 
 KEYSTONE_MEMBER_ROLE_ID = ''
+KEYSTONE_TENANTMANAGER_ROLE_ID = ''
 KEYSTONE_ADMIN_ENDPOINT_PERMS = ('openstack.roles.tenantmanager',)
 
 USER_INFO_LOOKUP_ROLES = [('openstack.roles.allocationadmin',
@@ -415,7 +416,7 @@ USER_INFO_LOOKUP_ROLES = [('openstack.roles.allocationadmin',
 
 
 # Allocation notifier choices: 'freshdesk', 'taynac' or 'smtp'
-ALLOCATION_NOTIFIER = 'freshdesk'
+ALLOCATION_NOTIFIER = 'taynac'
 
 # Freshdesk details for ticket interactions and / or email outbounding
 FRESHDESK_DOMAIN = "fixme.freshdesk.com"

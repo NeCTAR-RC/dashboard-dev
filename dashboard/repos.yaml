@@ -12,13 +12,16 @@ repos:
   - name: manukaclient
     src: https://github.com/NeCTAR-RC/python-manukaclient.git
     branch: master
+  - name: langstrothclient
+    src: https://github.com/NeCTAR-RC/python-langstrothclient.git
+    branch: master
 #  - name: python-cloudkittyclient
 #    src: https://github.com/NeCTAR-RC/python-cloudkittyclient.git
 #    branch: nectar/wallaby
   - name: murano-dashboard
     src: https://github.com/NeCTAR-RC/murano-dashboard.git
   - name: cloudkitty-dashboard
-    src: https://github.com/NeCTAR-RC/cloudkitty-dashboard.git
+    src: https://github.com/openstack/cloudkitty-dashboard.git
   - name: octavia-dashboard
     src: https://github.com/openstack/octavia-dashboard.git
   - name: magnum-ui
@@ -31,6 +34,8 @@ repos:
     src: https://github.com/openstack/heat-dashboard.git
   - name: warre-dashboard
     src: https://github.com/NeCTAR-RC/warre-dashboard.git
+  - name: varroa-dashboard
+    src: https://github.com/NeCTAR-RC/varroa-dashboard.git
 #  - name: django-select2-forms
 #    src: https://github.com/NeCTAR-RC/django-select2-forms.git
 #    branch: nectar/master
